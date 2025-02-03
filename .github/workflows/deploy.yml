@@ -1,0 +1,22 @@
+name: Deploy Infrastructure
+
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+    types: [infra-update]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      
+      - name: Deploy CDK Infrastructure
+        run: |
+          echo "Deploying infrastructure..."
+          # Example: Run CDK deployment
+          npm install -g aws-cdk
+          cdk deploy --all --require-approval never
