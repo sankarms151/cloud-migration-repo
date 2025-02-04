@@ -1,8 +1,8 @@
-package cloud_migration;
+package libs.infra.src.cloud_migration;
 
 public class Child {
     public static void printMessage() {
         System.out.println("Hello World");
-        System.out.println("04.02.2025");
+        System.out.println("05.02.2025");
     }
 }
