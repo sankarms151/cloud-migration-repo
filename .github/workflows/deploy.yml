@@ -17,6 +17,3 @@ jobs:
       - name: Deploy CDK Infrastructure
         run: |
           echo "Deploying infrastructure..."
-          # Example: Run CDK deployment
-          npm install -g aws-cdk
-          cdk deploy --all --require-approval never
